@@ -24633,10 +24633,33 @@ body.edit-mode .block.all-previews .block-tools label.prw2 {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
+@font-face {
+    font-family: 'iconfont';
+    src: url('//at.alicdn.com/t/font_1477352613_0302835.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1477352613_0302835.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1477352613_0302835.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1477352613_0302835.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1477352613_0302835.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont{
+    font-family:"iconfont";
+    font-size:16px;
+    font-style:normal;
+}
+
+.hotshots-icon-webchat:before{
+    content: '\E600';
+}
+
 .img-back{
     background-image: url(img/code.png);
     width: 200px;
     height: 300px;
+}
+
+.communicate li{
+    display: inline-block;
 }@font-face {
     font-family: 'icomoon-reg';
     src:  url(fonts/icomoon-reg.eot);
