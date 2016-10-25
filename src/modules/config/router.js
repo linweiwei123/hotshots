@@ -10,9 +10,31 @@ angular.module('hotshots').config(function($stateProvider,$urlRouterProvider){
     $urlRouterProvider.otherwise("/productlist");
     
     var homeState = {
-        name:'home',
-        url:'/home',
-        template:'<h3>home page</h3>'
+        state:'home',
+        config:{
+            url:'/home',
+            templateProvider:function($q){
+                return $q(function(resolve){
+                    require.ensure([],function(){
+                        resolve(require('../business/home/home.html'));
+                    });
+                })
+            },
+            controller:'HomeController',
+            resolve:{
+                'hotshots.home': function($q, $ocLazyLoad){
+                    return $q(function(resolve){
+                        require.ensure(['../business/home/home.controller'],function(){
+                            var ctrl = require('../business/home/home.controller');
+                            $ocLazyLoad.load({
+                                name:'hotshots.home'
+                            });
+                            resolve(ctrl);
+                        })
+                    })
+                }
+            }
+        }
     }
     var productlistRouter = {
         state:'productlist',
@@ -25,7 +47,7 @@ angular.module('hotshots').config(function($stateProvider,$urlRouterProvider){
                     });
                 });
             },
-            controller: 'productListController',
+            controller: 'ProductListController',
             resolve:{
                 'hotshots.productlist': function($q, $ocLazyLoad){
                     return $q(function(resolve){
@@ -42,6 +64,7 @@ angular.module('hotshots').config(function($stateProvider,$urlRouterProvider){
         }
     }
 
-    $stateProvider.state(homeState);
+
+    $stateProvider.state(homeState.state,homeState.config);
     $stateProvider.state(productlistRouter.state,productlistRouter.config);
 });

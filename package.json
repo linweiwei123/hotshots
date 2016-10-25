@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "angular": "^1.5.8",
+    "angular-swiper": "^0.4.0",
     "angular-ui-router": "^0.3.1",
     "css-loader": "^0.25.0",
     "extract-text-webpack-plugin": "^1.0.1",

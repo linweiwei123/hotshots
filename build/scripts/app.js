@@ -24,13 +24,12 @@ webpackJsonp([0],[
 	__webpack_require__(/*! ../asserts/css/hotshots.css */ 13);
 	__webpack_require__(/*! ../asserts/css/font-icomoon.css */ 14);
 	
+	
 	var app = angular.module('hotshots',[uirouter,oclazylaod]);
 	
 	//路由配置
 	__webpack_require__(/*! ./config/router */ 15);
 	
-	//各业务模块
-	__webpack_require__(/*! ./business/home */ 20);
 	
 	
 
@@ -6076,9 +6075,31 @@ webpackJsonp([0],[
 	    $urlRouterProvider.otherwise("/productlist");
 	    
 	    var homeState = {
-	        name:'home',
-	        url:'/home',
-	        template:'<h3>home page</h3>'
+	        state:'home',
+	        config:{
+	            url:'/home',
+	            templateProvider:function($q){
+	                return $q(function(resolve){
+	                    __webpack_require__.e/* nsure */(1, function(){
+	                        resolve(__webpack_require__(/*! ../business/home/home.html */ 16));
+	                    });
+	                })
+	            },
+	            controller:'HomeController',
+	            resolve:{
+	                'hotshots.home': function($q, $ocLazyLoad){
+	                    return $q(function(resolve){
+	                        __webpack_require__.e/* nsure */(2, function(){
+	                            var ctrl = __webpack_require__(/*! ../business/home/home.controller */ 17);
+	                            $ocLazyLoad.load({
+	                                name:'hotshots.home'
+	                            });
+	                            resolve(ctrl);
+	                        })
+	                    })
+	                }
+	            }
+	        }
 	    }
 	    var productlistRouter = {
 	        state:'productlist',
@@ -6086,17 +6107,17 @@ webpackJsonp([0],[
 	            url:'/productlist',
 	            templateProvider: function($q){
 	                return $q(function(resolve){
-	                    __webpack_require__.e/* nsure */(1, function(){
-	                        resolve(__webpack_require__(/*! ../business/productlist/productList.html */ 16));
+	                    __webpack_require__.e/* nsure */(3, function(){
+	                        resolve(__webpack_require__(/*! ../business/productlist/productList.html */ 20));
 	                    });
 	                });
 	            },
-	            controller: 'productListController',
+	            controller: 'ProductListController',
 	            resolve:{
 	                'hotshots.productlist': function($q, $ocLazyLoad){
 	                    return $q(function(resolve){
-	                        __webpack_require__.e/* nsure */(2, function(){
-	                            var ctrl = __webpack_require__(/*! ../business/productlist/productlist.controller */ 18);
+	                        __webpack_require__.e/* nsure */(4, function(){
+	                            var ctrl = __webpack_require__(/*! ../business/productlist/productlist.controller */ 22);
 	                            $ocLazyLoad.load({
 	                                name:'hotshots.productlist'
 	                            });
@@ -6108,25 +6129,10 @@ webpackJsonp([0],[
 	        }
 	    }
 	
-	    $stateProvider.state(homeState);
+	
+	    $stateProvider.state(homeState.state,homeState.config);
 	    $stateProvider.state(productlistRouter.state,productlistRouter.config);
 	});
-
-/***/ },
-/* 16 */,
-/* 17 */,
-/* 18 */,
-/* 19 */,
-/* 20 */
-/*!********************************************!*\
-  !*** ./src/modules/business/home/index.js ***!
-  \********************************************/
-/***/ function(module, exports) {
-
-	/**
-	 * Created by Administrator on 2016/10/21.
-	 */
-
 
 /***/ }
 ]);

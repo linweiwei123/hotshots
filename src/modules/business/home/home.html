@@ -1,0 +1,57 @@
+<!--<link rel="stylesheet" href="../../../asserts/css/swiper.min.css">-->
+<main class="page-main" ng-controller="HomeController">
+    <!-- Swiper -->
+    <div class="block full-nopad small-margin fullwidth" style="width: 1903px; margin-left: -951.5px;">
+        <div class="container">
+            <div class="mainSlider" >
+                <!-- Slider main container -->
+                <!--<div class="swiper-container" >-->
+                    <!--<div class="swiper-wrapper" >-->
+                        <!--<div class="swiper-slide" >-->
+                            <!--<div class="wrapper">-->
+                                <!--<figure><img src="../../../asserts/image/slide_1.jpg" alt=""></figure>-->
+                             <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="swiper-slide"   >-->
+                            <!--<div class="wrapper">-->
+                                <!--<figure><img src="../../../asserts/image/slide_2.jpg" alt=""></figure>-->
+                                <!--</div>-->
+                        <!--</div>-->
+
+
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Add Pagination &ndash;&gt;-->
+                    <!--<div class="swiper-pagination"></div>-->
+                <!--</div>-->
+
+                    <ks-swiper-container swiper="swiper"
+                                         pagination-is-active="true"
+                                         pagination-clickable="false"
+                                         show-nav-buttons="false"
+                                         loop="true"
+                                         animating="false"
+                                         autoplay="5000"
+                                         initial-slide="0">
+                        <ks-swiper-slide class="swiper-slide" ng-repeat="s in [1,2,3,4]">
+                            <div class="wrapper">
+                                <figure>
+                                     <img ng-src="http://oflt40zxf.bkt.clouddn.com/hotshots/ecommerce/image/slide_{{s}}.jpg">
+                                </figure>
+                                <div class="text animate flipInY animated " data-animate="flipInY" data-delay="0" data-fontsize="3.8" data-fontline="0.71" data-fontfamily="Raleway,sans-serif" data-fontcolor="#f82e56" data-fontweight="900" data-ypos="29" data-xpos="9" data-otherstyle="" style="left:9%;top:29%;font-weight:900;color:#f82e56;font-family:Raleway,sans-serif;line-height:0.71em;font-size:3.8vw;"> Seikō </div>
+                                <div class="text animate bounceIn animated" data-animate="bounceIn" data-delay="500" data-fontsize="6" data-fontfamily="Raleway,sans-serif" data-fontcolor="#333745" data-fontweight="900" data-ypos="36" data-xpos="6" data-otherstyle="text-transform: uppercase;" style="text-transform: uppercase;left:6%;top:36%;font-weight:900;color:#333745;font-family:Raleway,sans-serif;font-size:6vw;"> Season sale </div>
+                                <div class="text animate bounceIn animated" data-animate="bounceIn" data-delay="1000" data-fontsize="4" data-fontfamily="Raleway,sans-serif" data-fontcolor="#333745" data-fontweight="100" data-ypos="51.5" data-xpos="13" data-otherstyle="text-transform: uppercase;" style="text-transform: uppercase;left:13%;top:51.5%;font-weight:100;color:#333745;font-family:Raleway,sans-serif;font-size:4vw;"> popular brands </div>
+                                <div class="text animate rubberBand animated" data-animate="rubberBand" data-delay="1500" data-fontsize="8" data-fontfamily="Roboto,sans-serif" data-fontcolor="#f82e56" data-fontweight="900" data-ypos="59" data-xpos="25" data-otherstyle="" style="left:25%;top:59%;font-weight:900;color:#f82e56;font-family:Roboto,sans-serif;font-size:8vw;"> 70% </div>
+                                <div class="text animate hinge animated" data-animate="hinge" data-delay="2000" data-fontsize="7" data-fontfamily="Raleway,sans-serif" data-fontcolor="#f82e56" data-fontweight="900" data-ypos="62" data-xpos="47" data-otherstyle="" style="left:47%;top:62%;font-weight:900;color:#f82e56;font-family:Raleway,sans-serif;font-size:7vw;"> OFF </div>
+                            </div>
+                        </ks-swiper-slide>
+                    </ks-swiper-container>
+
+            </div>
+            <!-- /Main Slider -->
+        </div>
+    </div>
+
+
+</main>
+<!--&lt;!&ndash; Swiper JS &ndash;&gt;-->
+<!--<script src="../../../asserts/js/swiper.min.js"></script>-->

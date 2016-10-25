@@ -24635,21 +24635,58 @@ body.edit-mode .block.all-previews .block-tools label.prw2 {
 }
 @font-face {
     font-family: 'iconfont';
-    src: url('//at.alicdn.com/t/font_1477352613_0302835.eot'); /* IE9*/
-    src: url('//at.alicdn.com/t/font_1477352613_0302835.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('//at.alicdn.com/t/font_1477352613_0302835.woff') format('woff'), /* chrome、firefox */
-    url('//at.alicdn.com/t/font_1477352613_0302835.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('//at.alicdn.com/t/font_1477352613_0302835.svg#iconfont') format('svg'); /* iOS 4.1- */
+    src: url('//at.alicdn.com/t/font_1477372400_2475893.eot'); /* IE9*/
+    src: url('//at.alicdn.com/t/font_1477372400_2475893.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('//at.alicdn.com/t/font_1477372400_2475893.woff') format('woff'), /* chrome、firefox */
+    url('//at.alicdn.com/t/font_1477372400_2475893.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('//at.alicdn.com/t/font_1477372400_2475893.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
+
 
 .iconfont{
     font-family:"iconfont";
-    font-size:16px;
     font-style:normal;
 }
 
 .hotshots-icon-webchat:before{
     content: '\E600';
+}
+
+.hotshots-icon-xinlang:before{
+    content: '\E601';
+}
+.hotshots-icon-qq:before{
+     content: '\E602';
+ }
+.fa-3{
+    font-size:30px;
+}
+
+
+.communicate{
+    text-align: center;
+    margin-bottom: 0px;
+}
+.communicate li{
+    display: inline-block;
+    padding: 0 10px 0 10px;
+}
+.communicate li a{
+    color: #333745;
+}
+.communicate li a:hover{
+    color: #f82e56;
+    text-decoration: none;
+}
+
+/**--margin--**/
+.push-top-12{
+    margin-top: 12px;
+}
+
+/**--home--**/
+.mainSlider .swiper-container{
+    opacity: 1;
 }
 
 .img-back{
@@ -24658,8 +24695,8 @@ body.edit-mode .block.all-previews .block-tools label.prw2 {
     height: 300px;
 }
 
-.communicate li{
-    display: inline-block;
+.wrapper .text{
+    position: absolute;
 }@font-face {
     font-family: 'icomoon-reg';
     src:  url(fonts/icomoon-reg.eot);

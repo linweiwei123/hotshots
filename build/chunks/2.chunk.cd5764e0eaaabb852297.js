@@ -2,7 +2,7 @@ webpackJsonp([2],{
 
 /***/ 18:
 /*!********************************************************************!*\
-  !*** ./src/modules/business/productlist/productlist.controller.js ***!
+  !*** ./src/modules/business/productlist/productlist.home.controller.js ***!
   \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 

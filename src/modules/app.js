@@ -17,12 +17,11 @@ require('../asserts/css/animate.css');
 require('../asserts/css/hotshots.css');
 require('../asserts/css/font-icomoon.css');
 
+
 var app = angular.module('hotshots',[uirouter,oclazylaod]);
 
 //路由配置
 require('./config/router');
 
-//各业务模块
-require('./business/home');
 
 
