@@ -10,8 +10,24 @@
     </head>
     <body ng-app="hotshots" class="boxed fly_to_cart ajax_cart">
 
+        <!-- loading -->
+        <div id="loader-wrapper" >
+            <div class="cube-wrapper">
+                <div class="cube-folding">
+                    <span class="leaf1"></span>
+                    <span class="leaf2"></span>
+                    <span class="leaf3"></span>
+                    <span class="leaf4"></span>
+                </div>
+            </div>
+        </div>
+        <!-- loading -->
+
+
         <div id="wrapper">
             <div class="page-wrapper">
+
+                <!-- header -->
                 <header class="page-header fullboxed variant-2 sticky smart">
                     <div class="navbar">
                             <div class="container">
@@ -51,6 +67,8 @@
                             </div>
                     </div>
                 </header>
+                <!-- header -->
+
                 <ui-view></ui-view>
 
                 <footer class="page-footer variant2 fullboxed">
@@ -167,7 +185,14 @@
                 </footer>
             </div>
         </div>
-
+        <script type="text/javascript">
+//            var loading = document.getElementById("loader-wrapper");
+//            console.log(loading);
+//            if(loading){
+//                console.log(">0");
+//                loading.style.display = "none";
+//            }
+        </script>
 
 
     </body>

@@ -4,7 +4,7 @@
 var angular = require('angular');
 var uirouter = require('angular-ui-router');
 var oclazylaod = require('oclazyload');
-
+var $ = require('jquery');
 //css引用
 require('../asserts/css/slick.css');
 require('../asserts/css/swiper.min.css');
@@ -19,7 +19,12 @@ require('../asserts/css/font-icomoon.css');
 
 
 var app = angular.module('hotshots',[uirouter,oclazylaod]);
+app.run(function($rootScope){
 
+    //页面资源下载完毕，遮罩取消
+    $("#loader-wrapper").hide();
+
+});
 //路由配置
 require('./config/router');
 

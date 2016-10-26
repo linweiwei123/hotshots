@@ -7,7 +7,11 @@
     url('//at.alicdn.com/t/font_1477372400_2475893.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
+.loading-ul{
+    font-family: helvetica,"Times New Roman","Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif; margin-top: -80px;
+}
 
+/** icon **/
 .iconfont{
     font-family:"iconfont";
     font-style:normal;
@@ -27,7 +31,7 @@
     font-size:30px;
 }
 
-
+/** app main**/
 .communicate{
     text-align: center;
     margin-bottom: 0px;
@@ -52,6 +56,7 @@
 /**--home--**/
 .mainSlider .swiper-container{
     opacity: 1;
+    min-height: 100px;
 }
 
 .img-back{
