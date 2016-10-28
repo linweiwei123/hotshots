@@ -1,0 +1,54 @@
+<div class="product-item-inside">
+
+        <div class="product-item-info" style="padding:12px;display:block">
+            <!--标签-->
+            <div class="product-item-label label-new"><span>New</span></div>
+
+            <!--图片-->
+            <div class="product-item-photo">
+                <!-- Product Photo -->
+                <!-- product inside carousel -->
+                <div class="carousel-inside slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item" ng-repeat="p in ['60','61','62']" ng-class="{active:activeArray[$index]}">
+                            <a title="Longline  asymmetric midi skirt" href="/products/longline-asymmetric-midi-skirt"><img class="product-image-photo" ng-src="http://oflt40zxf.bkt.clouddn.com/hotshots/ecommerce/home/products/new/{{p}}_large.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <a class="carousel-control next" ng-click="addClick()"></a>
+                    <a class="carousel-control prev" ng-click="minusClick()"></a>
+                </div>
+
+                <div class="product-item-actions">
+                    <div class="actions-primary">
+                        <form method="post" action="/cart/add">
+                            <button class="btn btn-sm btn-invert add_to_cart" data-variant-id="28259937287"> <i class="icon icon-cart"></i><span>Add to Cart</span> </button>
+                        </form>
+                    </div>
+                    <div class="actions-secondary">
+                        <a href="#" title="Link" class="sharing"> <i class="icon icon-share"></i> </a>
+                        <a href="/products/long-sleeve-overall" class="quick-view-link" title="Qiuck View"> <i class="icon icon-eye"></i> </a>
+                        <a href="#" title="Add to Wishlist" class="no_wishlist"> <i class="icon icon-heart"></i><span>Add to Wishlist</span> </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--价格-->
+            <div class="product-item-details">
+                <div class="product-item-name"> <a title="Long sleeve overall" href="/products/long-sleeve-overall" class="product-item-link">Long sleeve overall</a> </div>
+                <div class="price-box">
+                <span class="price-container">
+                <span class="price-wrapper ">
+                    <span class="special-price"> From <span class="money" data-currency-usd="$30.00">$30.00</span></span>
+                </span>
+                </span>
+                </div>
+                <!-- Product Actions -->
+                <div class="product-item-actions">
+                    <div class="actions-primary">
+                        <a class="btn btn-sm btn-invert quick-view-link" href="/products/long-sleeve-overall"> <i class="icon icon-cart"></i><span>Select Options</span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>

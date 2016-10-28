@@ -6,18 +6,9 @@
 require('../../../asserts/css/swiper.min.css');
 require('../../../asserts/js/swiper.min.js');
 require('angular-swiper');
-module.exports = angular.module('hotshots.home',['ksSwiper'])
+require('../../directives/swiper.directive.js');
+module.exports = angular.module('hotshots.home',['ksSwiper','hotshots.htswiper'])
     .controller('HomeController',function ($scope) {
         $scope.list = ['macbook'];
-        //  productService.getProduct(function(data,status,headers,config){
-        //     console.log(data);
-        //      $scope.list = data;
-        // });
-
-        $scope.swiper = {};
-
-        $scope.next = function(){
-            $scope.swiper.slideNext();
-        };
-
+        $scope.products = [{},{},{},{},{},{},{}];
     });

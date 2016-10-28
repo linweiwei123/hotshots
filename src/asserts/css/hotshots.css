@@ -68,3 +68,9 @@
 .wrapper .text{
     position: absolute;
 }
+
+.product-swiper-wrapper{
+    margin-bottom: 20px;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+}
