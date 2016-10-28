@@ -22,7 +22,15 @@ var app = angular.module('hotshots',[uirouter,oclazylaod]);
 app.run(function($rootScope){
 
     //页面资源下载完毕，遮罩取消
-    $("#loader-wrapper").hide();
+
+        //$("#loader-wrapper").hide();
+    console.log("hide loading");
+   // $rootScope.isShowLoading = false;
+    //
+    $(document).ready(function(){
+        $("#loader-wrapper").hide();
+    });
+
 
 });
 //路由配置

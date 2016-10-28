@@ -1,17 +1,16 @@
 <!doctype html>
-<html>
+<html ng-app="hotshots">
     <head>
         <meta charset="UTF-8">
         <title>名流</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         
     </head>
-    <body ng-app="hotshots" class="boxed fly_to_cart ajax_cart">
+    <body  class="boxed fly_to_cart ajax_cart">
 
         <!-- loading -->
-        <div id="loader-wrapper" >
+        <div id="loader-wrapper" ng-init="isShowLoading=true" ng-show="isShowLoading">
             <div class="cube-wrapper">
                 <div class="cube-folding">
                     <span class="leaf1"></span>
@@ -192,6 +191,11 @@
 //                console.log(">0");
 //                loading.style.display = "none";
 //            }
+
+window.onload=function(){
+    //do something
+    document.getElementById("loader-wrapper").style.display="none";
+}
         </script>
 
 
