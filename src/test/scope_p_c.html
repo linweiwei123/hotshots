@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pcApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../node_modules/angular/angular.min.js"></script>
+</head>
+<body>
+        <button ng-click="rootClick()">rootClick</button>
+        <div ng-controller="ParentCtrl" ng-init="person.name=lww">
+            <span>{{person.name}}</span>
+            <button ng-click="parentClick()">parentClick</button>
+            <div ng-controller="ChildCtrl" >
+                <span>{{person.name}}</span>
+                <button ng-click="childClick()">childclick</button>
+            </div>
+        </div>
+</body>
+<script type="text/javascript">
+
+    angular.module('pcApp',[])
+            .run(function ($rootScope) {
+
+            })
+            .controller('ParentCtrl',function ($scope) {
+                $scope.parentClick = function () {
+                    $scope.person.name = 'lww parent';
+                }
+            })
+            .controller('ChildCtrl',function ($scope) {
+                $scope.childClick = function () {
+                    $scope.person.name = 'lww child';
+                }
+            })
+
+</script>
+</html>
