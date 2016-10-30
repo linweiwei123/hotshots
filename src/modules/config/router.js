@@ -39,7 +39,7 @@ angular.module('hotshots').config(function($stateProvider,$urlRouterProvider){
     var productlistRouter = {
         state:'productlist',
         config:{
-            url:'/productlist',
+            url:'/productlist/:type',
             templateProvider: function($q){
                 return $q(function(resolve){
                     require.ensure([],function(){

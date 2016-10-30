@@ -1,9 +1,124 @@
-<div ng-controller="ProductListController">
-    <ul ng-repeat="product in list">
-        <li  >{{product}}</li>
-    </ul>
-    <div>
-        <img src="../../../asserts/image/code.jpg" alt="">
-        <div class="img-back"></div>
+<main class="page-main">
+    <div class="container">
+            <div class="row row-table">
+
+                <!--左侧导航-->
+                <div class="col-md-3 filter-col aside">
+                    <div class="filter-container">
+                        <div class="fstart"></div>
+                        <div class="fixed-wrapper">
+                            <div class="fixed-scroll">
+                                <div class="filter-col-header">
+                                    <div class="title">Filters</div>
+                                    <a href="#" class="filter-col-toggle"></a>
+                                </div>
+                                <div class="filter-col-content">
+                                    <div class="sidebar-block collapsed">
+                                        <div class="block-title"> <span>Categories</span>
+                                            <div class="toggle-arrow"></div>
+                                        </div>
+                                        <div class="block-content">
+                                            <ul class="category-list categories">
+                                                <li><a href="/collections/women" title="">Women</a></li>
+                                                <li><a href="/collections/men" title="">Men</a></li>
+                                                <li><a href="/collections/electronics" title="">Devices</a></li>
+                                            </ul>
+                                            <div class="bg-striped"></div>
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-block collapsed">
+                                        <div class="block-title"> <span>Categories</span>
+                                            <div class="toggle-arrow"></div>
+                                        </div>
+                                        <div class="block-content">
+                                            <ul class="category-list categories">
+                                                <li><a href="/collections/women" title="">Women</a></li>
+                                                <li><a href="/collections/men" title="">Men</a></li>
+                                                <li><a href="/collections/electronics" title="">Devices</a></li>
+                                            </ul>
+                                            <div class="bg-striped"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                         </div>
+                        <div class="fend"></div>
+                    </div>
+                </div>
+                <!--右侧产品列表-->
+                <div class="col-md-9  aside">
+                    <div class="page-title">
+                        <div class="title center">
+                            <h1>Ajax Attributes Filter - static</h1> </div>
+                    </div>
+                    <div class="product-listing">
+                        <!-- Filter Row -->
+                        <div class="filter-row">
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-6 col-lg-5 col-left">
+                                    <div class="filter-button"> <a href="#" class="btn filter-col-toggle"><i class="icon icon-filter"></i><span>FILTER</span></a> </div>
+                                    <div class="form-label">Sort by:</div>
+                                    <div class="select-wrapper-sm">
+                                        <select class="form-control input-sm SortBy" name="sort_by" id="sort_by">
+                                            <option value="manual">Featured</option>
+                                            <option value="best-selling">Best Selling</option>
+                                            <option value="title-ascending">Alphabetically, A-Z</option>
+                                            <option value="title-descending">Alphabetically, Z-A</option>
+                                            <option value="price-ascending">Price, low to high</option>
+                                            <option value="price-descending">Price, high to low</option>
+                                            <option value="created-descending">Date, new to old</option>
+                                            <option value="created-ascending">Date, old to new</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2 col-lg-2 hidden-xs">
+                                    <div class="view-mode"> <a href="#" class="grid-view"><i class="icon icon-th"></i></a> <a href="#" class="list-view"><i class="icon icon-th-list"></i></a> </div>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-lg-5 col-right">
+                                    <div class="form-label">Show:</div>
+                                    <div class="select-wrapper-sm">
+                                        <form method="get" id="show_pages">
+                                            <select class="form-control input-sm" name="view">
+                                                <option value="9">9</option>
+                                                <option value="18">18</option>
+                                                <option value="36">36</option>
+                                                <option value="all">All</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-striped"></div>
+                        </div>
+                        <!-- /Filter Row -->
+                        <!-- Total -->
+                        <div class="items-total">Total 27 Iitem(s)</div>
+                        <!-- /Total -->
+
+                        <!-- 产品列表-->
+                        <div class="products-grid three-in-row product-variant-3 product-items">
+                                <div class="product-item large" ng-repeat="product in products">
+                                    <ht-main-swiper></ht-main-swiper>
+                                </div>
+                        </div>
+                        <!-- /Products Grid -->
+                        <div class="btn-center show_more_wrapper"> <a href="ajax-attributes-filter-static-page=3.htm" class="btn show_more">Show More<div class="bg-striped"></div></a> </div>
+                        <!-- Total -->
+                        <div class="items-total">
+                            <ul class="pagination pull-right">
+                                <li><a href=""><i class="icon icon-angle-left"></i></a></li>
+                                <li> <a href="">1</a> </li>
+                                <li class="active"><a>2</a></li>
+                                <li> <a href="" title="">3</a> </li>
+                                <li><a href="" title="Next »"><i class="icon icon-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- /Total -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="ymax"></div>
     </div>
-</div>
+</main>

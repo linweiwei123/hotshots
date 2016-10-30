@@ -9,9 +9,21 @@
     </head>
     <body  class="boxed fly_to_cart ajax_cart">
 
-        <!-- loading -->
+        <!-- app 加载时 loading -->
         <div id="loader-wrapper" ng-init="isShowLoading=true" ng-show="isShowLoading">
             <div class="cube-wrapper">
+                <div class="cube-folding">
+                    <span class="leaf1"></span>
+                    <span class="leaf2"></span>
+                    <span class="leaf3"></span>
+                    <span class="leaf4"></span>
+                </div>
+            </div>
+        </div>
+
+        <!--page 加载 loading-->
+        <div ht-page-load class="page-loader hide">
+            <div class="block">
                 <div class="cube-folding">
                     <span class="leaf1"></span>
                     <span class="leaf2"></span>
@@ -38,11 +50,11 @@
                                     <ul class="nav">
                                         <li class="  ">
                                             <a ui-sref="home" ui-sref-active="active"><i class="icon icon-home"></i></a>
-                                        <li class="simple-dropdown  "> <a ui-sref="productlist" ui-sref-active="active">产品列表</a> </li>
-                                        <li class="mega-dropdown active"> <a href="women.htm" title="">Women<span class="menu-label">sale</span></a> </li>
-                                        <li class="mega-dropdown "> <a href="men.htm"  title="">Men<span class="menu-label-alt">new</span></a> </li>
-                                        <li class="simple-dropdown  "> <a href="electronics.htm"  title="">Electronics</a> </li>
-                                        <li class="  "> <a href="sales.htm"  title="">Sale<span class="menu-label">-10%</span></a> </li>
+                                        <li class="simple-dropdown  "> <a href="#/productlist/bag" ui-sref="productlist({type:'bag'})" ui-sref-active="active">包包</a> </li>
+                                        <li class="mega-dropdown active"> <a href="#/productlist/woman" ui-sref="productlist({type:'woman'})" ui-sref-active="active">女装<span class="menu-label">sale</span></a> </li>
+                                        <li class="mega-dropdown "><a ui-sref="productlist" ui-sref-active="active">珠宝<span class="menu-label-alt">new</span></a> </li>
+                                        <li class="simple-dropdown  "> <a ui-sref="productlist" ui-sref-active="active">手表</a> </li>
+                                        <li class="  "> <a ui-sref="productlist" ui-sref-active="active">折扣<span class="menu-label">-10%</span></a> </li>
                                     </ul>
                                 </div>
 
