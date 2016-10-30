@@ -7,7 +7,7 @@ var angular = require('angular');
 angular.module('hotshots').config(function($stateProvider,$urlRouterProvider){
 
     //默认state1
-    $urlRouterProvider.otherwise("/productlist");
+    $urlRouterProvider.otherwise("/home");
     
     var homeState = {
         state:'home',
